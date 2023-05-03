@@ -1,0 +1,53 @@
+{
+  "name": "Bocil-Userbot",
+  "description": "[Bocil-Userbot] Is a telegram userbot running on Python3 and use Pyrogram Library.",
+  "stack": "heroku-22",
+  "env": {
+    "API_ID": {
+      "description": "Get API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get API HASH from my.telegram.org",
+      "required": true
+    },
+    "STRING_SESSION1": {
+      "description": "Generate pryrogram v2 in @ctrlstringbot",
+      "required": true
+    },
+    "BOT_TOKEN": {
+        "description": "@Botfather",
+        "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "aget your Heroku API KEY here » https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "App name is the value you use first (above, first collum)",
+      "required": true
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+          "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
