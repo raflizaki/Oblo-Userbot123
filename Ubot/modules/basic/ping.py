@@ -18,7 +18,7 @@ from pyrogram.raw import functions
 from pyrogram.types import Message
 from datetime import datetime
 from . import DEVS, Ubot
-from ubotlibs.ubot.helper.PyroHelpers import *
+from Ubot.helper.PyroHelpers import *
 from Ubot import *
 from Ubot.core.db.pref import *
 from Ubot.modules.bot.inline import get_readable_time

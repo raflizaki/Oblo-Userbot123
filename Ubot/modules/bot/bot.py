@@ -7,8 +7,8 @@ from pyrogram.errors import MessageDeleteForbidden
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 from Ubot import CMD_HELP, app
-from ubotlibs.ubot.helper.data import Data
-from ubotlibs.ubot.helper.inline import cb_wrapper, paginate_help
+from Ubot.helper.data import Data
+from Ubot.helper.inline import cb_wrapper, paginate_help
 from Ubot import ids as users
 from config import SUPPORT, CHANNEL, CMD_HNDLR, ADMIN1_ID, ADMIN2_ID, ADMIN3_ID, ADMIN4_ID, ADMIN5_ID, ADMIN6_ID, ADMIN7_ID
 
@@ -77,7 +77,7 @@ async def start_admin(_, query: CallbackQuery):
         ),
     )
     
-@app.on_callback_query(filters.regex("admin"))
+@app.on_callback_query(filters.regex("admin_bot"))
 async def start_admin(_, query: CallbackQuery):
     ADMIN1 = ADMIN1_ID[0]
     ADMIN2 = ADMIN2_ID[0]

@@ -10,7 +10,7 @@ from emoji import get_emoji_regexp
 from PIL import Image, ImageDraw, ImageFont
 from Ubot.helper import get_arg
 from . import *
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper.PyroHelpers import ReplyCheck
 from Ubot.database.accesdb import *
 
 

@@ -717,6 +717,18 @@ bot49 = (
     else None
 )
 
+bot50 = (
+    Client(
+        name="bot50",
+        api_id=API_ID,
+        api_hash=API_HASH,
+        session_string=SESSION49,
+        plugins=dict(root="Ubot/modules"),
+    )
+    if SESSION50
+    else None
+)
+
 
 
 

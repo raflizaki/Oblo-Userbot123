@@ -1,6 +1,6 @@
 from asyncio import sleep
 from pyrogram import Client, filters
-from ubotlibs.ubot.database.notesdb import *
+from Ubot.database.notesdb import *
 from pyrogram.types import Message
 from Ubot.helper import *
 from . import *

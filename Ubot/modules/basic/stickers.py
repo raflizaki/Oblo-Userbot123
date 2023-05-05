@@ -19,7 +19,7 @@ from pyrogram.types import Message, InputMedia, InputMediaPhoto
 
 from . import *
 from Ubot.database.accesdb import *
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper.PyroHelpers import ReplyCheck
 from Ubot.helper import *
 
 

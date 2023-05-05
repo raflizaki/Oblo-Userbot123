@@ -1,7 +1,7 @@
 from pyrogram import Client, enums, filters
 from pyrogram.types import *
 from . import *
-from ubotlibs.ubot.database import *
+from Ubot.database import *
 from Ubot.database.accesdb import *
 from pyrogram.filters import chat
 import asyncio

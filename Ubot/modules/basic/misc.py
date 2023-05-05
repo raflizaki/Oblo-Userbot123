@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 from platform import python_version
 from . import *
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper.PyroHelpers import ReplyCheck
 from pyrogram import __version__, filters, Client
 from pyrogram.types import Message
 from config import ALIVE_PIC, ALIVE_TEXT
@@ -12,7 +12,7 @@ from Ubot import START_TIME, SUDO_USER, app
 from Ubot.database.accesdb import *
 from Ubot.modules.bot.inline import get_readable_time
 
-
+BOT_VER = "0.01"
 alive_logo = ALIVE_PIC or ""
 
 if ALIVE_TEXT:
@@ -20,7 +20,7 @@ if ALIVE_TEXT:
 else:
     txt = (
          f"▰▱▰▱°▱▱°▱▰▱▰\n"
-        f" ◉ **Kyran-Pyro**\n\n"
+        f" ◉ **Bocil-Userbot**\n\n"
         f" ◉ **Versi**: `{BOT_VER}`\n"
         f" ◉ **Uptime**: `{str(datetime.now() - START_TIME).split('.')[0]}`\n"
         f" ◉ **Phython**: `{python_version()}`\n"

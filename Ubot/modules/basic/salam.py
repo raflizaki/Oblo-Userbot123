@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from . import *
 from Ubot.helper import edit_or_reply
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper.PyroHelpers import ReplyCheck
 
 from Ubot.database.accesdb import *
 

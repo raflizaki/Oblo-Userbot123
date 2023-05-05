@@ -11,7 +11,7 @@ from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
 from . import *
-from ubotlibs.ubot.helper import get_arg
+from Ubot.helper import get_arg
 from Ubot.helper import edit_or_reply
 from Ubot.database.accesdb import *
 

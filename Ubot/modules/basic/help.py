@@ -4,9 +4,8 @@ import asyncio
 from prettytable import PrettyTable
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
-from Ubot.modules import Ubot
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
-from Ubot.helper import split_list
+from Ubot.core import Ubot
+from Ubot.helper import split_list, ReplyCheck
 from Ubot.database.accesdb import *
 from Ubot import app, CMD_HELP, SUDO_USER, cmds
 

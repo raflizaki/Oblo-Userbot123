@@ -5,7 +5,6 @@ import asyncio
 from pyrogram import idle
 from pyrogram.errors import RPCError
 from uvloop import install
-from ubotlibs import *
 from Ubot import BOTLOG_CHATID, aiosession, bot1, bots, app, ids, LOOP, event_loop
 from platform import python_version as py
 from Ubot.logging import LOGGER
@@ -17,7 +16,7 @@ from config import SUPPORT, CHANNEL, CMD_HNDLR, ADMIN1_ID, ADMIN2_ID, ADMIN3_ID,
 import os
 from dotenv import load_dotenv
 from pyrogram.errors import RPCError
-
+from Ubot.helper import join
 
 MSG_BOT = """
 ╼┅━━━━━━━━━━╍━━━━━━━━━━┅╾
@@ -68,7 +67,7 @@ async def main():
                         break
                 if session_name is None:
                    LOGGER("Ubot").info(f"Could not find session name in .env file for error: {str(e)}")
-    await app.send_message(SUPPORT, MSG_BOT.format(py(), pyro, user))
+    #await app.send_message(SUPPORT, MSG_BOT.format(py(), pyro, user))
     await idle()
     await aiosession.close()
     

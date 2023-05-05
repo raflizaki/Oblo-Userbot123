@@ -12,7 +12,7 @@ from pyrogram.types import *
 from youtube_search import YoutubeSearch
 from pytube import YouTube
 
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper.PyroHelpers import ReplyCheck
 from Ubot.helper import *
 from pyrogram import Client, enums
 from pyrogram.types import Message

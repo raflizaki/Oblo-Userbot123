@@ -10,7 +10,7 @@ from asyncio import get_event_loop
 from functools import partial
 import wget
 from Ubot import app, cmds
-from ubotlibs.ubot import Ubot
+from Ubot.core import Ubot
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 

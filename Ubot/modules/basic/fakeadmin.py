@@ -4,7 +4,7 @@ import random
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from . import *
-from Ubot.utils import extract_user_and_reason
+from Ubot.helper import extract_user_and_reason
 
 from Ubot.database.accesdb import *
 from Ubot.helper import get_arg

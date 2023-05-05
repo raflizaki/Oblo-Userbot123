@@ -4,7 +4,7 @@ from asyncio import sleep
 import os
 from . import *
 
-from ubotlibs.ubot.helper.PyroHelpers import ReplyCheck
+from Ubot.helper import ReplyCheck
 from pyrogram import Client, filters
 from pyrogram.types import Message
 

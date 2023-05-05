@@ -2,7 +2,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from . import *
-from ubotlibs.ubot.helper import edit_or_reply
+from Ubot.helper import edit_or_reply
 
 from Ubot.database.accesdb import *
 

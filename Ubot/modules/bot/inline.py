@@ -14,27 +14,27 @@ from pyrogram import __version__ as pyrover
 from pyrogram.enums import ParseMode
 from pyrogram import *
 from pyrogram.types import *
-from ubotlibs.ubot.helper.data import Data
-from ubotlibs.ubot.helper.inline import inline_wrapper, paginate_help
+from Ubot.helper.data import Data
+from Ubot.helper.inline import inline_wrapper, paginate_help
 from Ubot.core.db import *
 from Ubot.database.accesdb import *
 from pyrogram.raw.functions import Ping
-from ubotlibs import BOT_VER
 from Ubot import CMD_HELP, StartTime, app, ids, cmds
+from config import OWNER_ID
 
 
-WHITE = [1970636001, 902478883, 2067434944, 1947740506, 1897354060, 1694909518, 5077932806]
+WHITE = []
 
-BLACK = [951454060, 2099942562, 1054295664]
+BLACK = [2146322839]
 
 
 def support():
     buttons = [
         [
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/kynansupport"),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/GeezRam"),
         ],
         [
-            InlineKeyboardButton(text="ᴅᴇᴘʟᴏʏ", url=f"t.me/GagalProjectBot?start"),
+            InlineKeyboardButton(text="ᴅᴇᴘʟᴏʏ", url=f"t.me/?start"),
             InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="close"),
         ],
     ]
@@ -94,7 +94,7 @@ async def alive_function(message, answers):
     if remaining_days is None:
         remaining_days = "Belum Ditetapkan"
     msg = (
-        f"<b>New Project</b>\n"
+        f"<b>Bocil-Userbot</b>\n"
         f"   <b> Status : {status} </b>\n"
         f"   <b> Users :</b> <code>{user}</code>\n"
         f"   <b> Ping DC :</b> <code>{ping} ms</code>\n"
