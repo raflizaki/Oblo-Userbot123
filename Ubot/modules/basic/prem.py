@@ -16,7 +16,7 @@ from Ubot.core.db import *
 from pyrogram.raw.functions import Ping
 from Ubot.modules.bot.inline import get_readable_time
 from . import *
-
+from config import OWNER_ID
 load_dotenv()
 
 session_counter = count(1)
@@ -42,7 +42,7 @@ async def handle_grant_access(client: Client, message: Message):
             return
         user_id = user.id
 
-    if message.from_user.id not in ADMINS:
+    if message.from_user.id not in OWNER_ID:
         await message.reply_text("Maaf, hanya admin yang dapat memberikan akses.")
         return
 
