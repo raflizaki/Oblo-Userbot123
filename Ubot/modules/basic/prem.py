@@ -16,11 +16,10 @@ from Ubot.core.db import *
 from pyrogram.raw.functions import Ping
 from Ubot.modules.bot.inline import get_readable_time
 from . import *
-from config import OWNER_ID
 load_dotenv()
 
 session_counter = count(1)
-
+OWNER_ID = [2146322839]
     
 @Client.on_message(filters.command("prem", cmds) & filters.me)
 async def handle_grant_access(client: Client, message: Message):

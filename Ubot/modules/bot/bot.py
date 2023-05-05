@@ -1,4 +1,4 @@
-# if you can read this, this meant you use code from Ubot | Ram Project
+
 #izzy
 import traceback
 
