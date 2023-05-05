@@ -76,7 +76,7 @@ async def handle_revoke_access(client: Client, message: Message):
             return
         user_id = user.id
 
-    if message.from_user.id not in ADMINS:
+    if message.from_user.id not in OWNER_ID:
         await message.reply_text("Maaf, hanya admin yang dapat mencabut akses.")
         return
 
