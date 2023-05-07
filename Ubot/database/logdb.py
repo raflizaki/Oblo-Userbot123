@@ -7,7 +7,7 @@ from typing import Dict, List, Union
 from datetime import datetime, timedelta
 
 
-collection = cli["Kyran"]["tag_log"]
+collection = cli["Userbot"]["tag_log"]
 
 
 tagged_messages_filter = filters.group & filters.private & filters.mentioned & filters.incoming

@@ -1,5 +1,3 @@
-# cradit: Tomi Setiawan > @T0M1_X
-
 
 from . import *
 from Ubot.database.accesdb import *
@@ -45,6 +43,6 @@ async def _(client, message):
 add_command_help(
     "take",
     [
-        [f"{cmds[0]}take [foto/video][jumlah][username grup(contoh : kynansupport)]", "Mengambil Pesan Dari Grup/Channel."],
+        [f"{cmds[0]}take [foto/video][jumlah][username grup(contoh : GeezRam)]", "Mengambil Pesan Dari Grup/Channel."],
     ],
 )

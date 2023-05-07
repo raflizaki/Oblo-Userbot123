@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import pymongo.errors
 
 
-collection = cli["Kyran"]["access"]
+collection = cli["Userbot"]["access"]
 
 
 async def grant_access(user_id: int) -> bool:

@@ -5,7 +5,7 @@ from typing import *
 from datetime import datetime, timedelta
 import pymongo.errors
 
-collection = cli["Kyran"]["filters"]
+collection = cli["Userbot"]["filters"]
 
 
 from pymongo import MongoClient

@@ -2,7 +2,7 @@ from pyrogram.filters import chat
 from . import cli
 from typing import Dict, List, Union
 
-collection = cli["Kyran"]["notes"]
+collection = cli["Userbot"]["notes"]
 
 
 async def get_notes_count() -> dict:

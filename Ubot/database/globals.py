@@ -1,7 +1,7 @@
 from . import cli
 from typing import Dict, List, Union
 
-collection = cli["Kyran"]["globals"]
+collection = cli["Userbot"]["globals"]
 
 class Globals:
     def __init__(self, variable, value):
