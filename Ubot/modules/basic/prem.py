@@ -19,7 +19,7 @@ from . import *
 load_dotenv()
 
 session_counter = count(1)
-OWNER_ID = [2146322839]
+OWNER_ID = [843830036]
     
 @Client.on_message(filters.command("prem", cmds) & filters.me)
 async def handle_grant_access(client: Client, message: Message):
