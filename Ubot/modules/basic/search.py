@@ -1,11 +1,4 @@
-"""
-✅ Edit Code Boleh
-❌ Hapus Credits Jangan
-👤 Telegram: @T0M1_X
-"""
-
-
-
+#izzy
 import random
 
 from pyrogram.types import InputMediaPhoto
