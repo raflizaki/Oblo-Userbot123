@@ -67,7 +67,7 @@ async def main():
                         break
                 if session_name is None:
                    LOGGER("Ubot").info(f"Could not find session name in .env file for error: {str(e)}")
-    await bot.send_message("me", MSG_BOT.format(py(), pyro, user))
+    #await bot.send_message("me", MSG_BOT.format(py(), pyro, user))
     await idle()
     await aiosession.close()
     
