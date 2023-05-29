@@ -63,11 +63,11 @@ async def main():
                         session_name = f"SESSION{i}"
                         os.environ.pop(session_name)
                         LOGGER("Ubot").info(f"Removed {session_name} from .env file due to error.")
-                        await app.send_message(SUPPORT, f"Removed {session_name} from .env file due to error.")
+                        await app.send_message("me", f"Removed {session_name} from .env file due to error.")
                         break
                 if session_name is None:
                    LOGGER("Ubot").info(f"Could not find session name in .env file for error: {str(e)}")
-    #await app.send_message(SUPPORT, MSG_BOT.format(py(), pyro, user))
+    await app.send_message("me", MSG_BOT.format(py(), pyro, user))
     await idle()
     await aiosession.close()
     
