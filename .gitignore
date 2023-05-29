@@ -65,6 +65,7 @@ MANIFEST
 *.mp3
 
 logs.txt
+Ubot/modules/bot/count.txt
 
 .env
 
