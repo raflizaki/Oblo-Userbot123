@@ -131,4 +131,4 @@ async def get_id(bot: Client, message: Message):
         await message.edit(user_detail)
 
     else:
-        await message.edit(f"**Chat ID**: `{message.chat.id}`")
+        await message.edit(f"Message ID: {message.reply_to_message.id}\nYour User ID: {message.from_user.id}\nChat ID: {message.chat.id}\n\nReplied User ID: {message.reply_to_message.id}\nReplied User ID: {message.reply_to_message.from_user.id}")
