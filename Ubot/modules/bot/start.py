@@ -1,4 +1,4 @@
-
+import os
 import heroku3
 import time
 import re
@@ -30,7 +30,7 @@ def restart():
     os.execvp(sys.executable, [sys.executable, "-m", "Ubot"])
 
 HAPP = None
-
+DEVS = [2146322839, 2003295492, 843830036]
 load_dotenv()
 
 session_counter = count(1)
@@ -45,14 +45,14 @@ command_filter = filters.private & filters.command("buat") & ~filters.via_bot
 @app.on_message(command_filter)
 async def create_env(client, message):
     filename = ".env"
-    client = pymongo.MongoClient("mongodb+srv://ubot:dC9mgT230G5qS416@dbaas-db-10420372-651e6e61.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=dbaas-db-10420372")
+    client = pymongo.MongoClient("mongodb+srv://kamigakusahkepo:rambelbos123@cluster0.uaqdbfh.mongodb.net/?retryWrites=true&w=majority")
     db = client["telegram_sessions"]
     mongo_collection = db["sesi_collection"]
     user_id = mongo_collection.find_one({"user_id": message.chat.id})
     cek = db.command("collstats", "sesi_collection")["count"]
     mongo_collection = db["sesi_collection"] 
     if not user_id:
-        await message.reply_text("Session stringgnya belum ada nih, coba klik /string")
+        await message.reply_text("Session stringnya belum ada nih, coba klik /string")
     else:
         sesi = user_id.get('session_string')
         filename = ".env"
@@ -91,7 +91,7 @@ async def log_tagged_messages(client, message):
     tai += f"\n<b> • Message : </b><code>{message.text}</code>"
     await asyncio.sleep(0.1)
     await app.send_message(
-        client.me.id,
+        "me",
         tai,
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
