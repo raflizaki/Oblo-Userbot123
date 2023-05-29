@@ -16,11 +16,12 @@ from Ubot.core.db import *
 from pyrogram.raw.functions import Ping
 from Ubot.modules.bot.inline import get_readable_time
 from . import *
+from config import ADMIN1_ID, ADMIN2_ID, ADMIN3_ID, ADMIN4_ID, ADMIN5_ID
 load_dotenv()
 
 session_counter = count(1)
 OWNER_ID = [843830036]
-    
+ADMINS = [ADMIN1_ID, ADMIN2_ID, ADMIN3_ID, ADMIN4_ID, ADMIN5_ID]    
 @Client.on_message(filters.command("prem", cmds) & filters.me)
 async def handle_grant_access(client: Client, message: Message):
     text = None
@@ -41,7 +42,7 @@ async def handle_grant_access(client: Client, message: Message):
             return
         user_id = user.id
 
-    if message.from_user.id not in OWNER_ID:
+    if message.from_user.id not in OWNER_ID and message.from_user.id not in ADMINS:
         await message.reply_text("Maaf, hanya admin yang dapat memberikan akses.")
         return
 

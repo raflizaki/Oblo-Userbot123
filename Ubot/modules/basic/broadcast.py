@@ -8,9 +8,8 @@ from . import *
 from Ubot.helper import *
 from Ubot.database.accesdb import *
 from config import *
+from geezlibs import BL_GCAST
 
-HEROKU_API_KEY="8e5751ec-a57f-4d2c-9af7-f5b75b50c5bb"
-HEROKU_APP_NAME="lingubot3"
 
 HAPP = None
 
@@ -44,7 +43,6 @@ async def gcast_cmd(client: Client, message: Message):
         f"**Berhasil mengirim ke** `{done}` **Groups chat, Gagal mengirim ke** `{error}` **Groups**"
     )
 
-@Devs("cgucast")
 @Ubot("gucast", cmds)
 async def gucast(client: Client, message: Message):
     if message.reply_to_message or get_arg(message):
