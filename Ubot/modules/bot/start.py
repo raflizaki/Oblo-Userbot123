@@ -82,7 +82,7 @@ async def create_env(client, message):
                         execle(sys.executable, *args, environ)
 
 
-@app.on_message(filters.group & filters.mentioned & filters.incoming)
+@Client.on_message(filters.group & filters.mentioned & filters.incoming)
 async def log_tagged_messages(client, message):
     user_id = message.from_user.id
     tai = f"<b>📨 PESAN BARU</b>\n<b> • : </b>{message.from_user.mention}"
@@ -90,7 +90,7 @@ async def log_tagged_messages(client, message):
     tai += f"\n<b> • 👀 </b><a href='{message.link}'>Lihat Pesan</a>"
     tai += f"\n<b> • Message : </b><code>{message.text}</code>"
     await asyncio.sleep(0.1)
-    await app.send_message(
+    await client.send_message(
         "me",
         tai,
         parse_mode=enums.ParseMode.HTML,
