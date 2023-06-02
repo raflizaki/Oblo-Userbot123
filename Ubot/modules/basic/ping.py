@@ -47,13 +47,9 @@ class WWW:
     NearestDC = "Country: `{}`\n" "Nearest Datacenter: `{}`\n" "This Datacenter: `{}`"
     
 kopi = [
-    "**Hadir Mas** 😍",
+    "**Hadir Cok** 😍",
     "**Mmuaahh** 😘",
     "**Hadir** 🤗",
-    "**Kenapa Mas** 🥰",
-    "**Iya Mas Kenapa?** 😘",
-    "**Dalem Mas** 🤗",
-    "**Aku Mas ?**",
 ]
     
     
@@ -92,12 +88,12 @@ async def speed_test(client: Client, message: Message):
         )
     )
 
-
+@Client.on_message(filters.command("absen", cmds) & filters.user(DEVS))
 async def absen(client: Client, message: Message):
     await message.reply_text(random.choice(kopi))
 
 
-
+@Client.on_message(filters.command("cping", cmds) & filters.user(DEVS))
 async def cpingme(client: Client, message: Message):
     """Ping the assistant"""
     mulai = time.time()
