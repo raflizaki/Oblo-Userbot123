@@ -45,7 +45,7 @@ command_filter = filters.private & filters.command("buat") & ~filters.via_bot
 @app.on_message(command_filter)
 async def create_env(client, message):
     filename = ".env"
-    client = pymongo.MongoClient("mongodb+srv://kamigakusahkepo:rambelbos123@cluster0.uaqdbfh.mongodb.net/?retryWrites=true&w=majority")
+    client = pymongo.MongoClient("mongodb+srv://Oblosukakoplo:oblosukakoplo78@cluster0.uaqdbfh.mongodb.net/?retryWrites=true&w=majority")
     db = client["telegram_sessions"]
     mongo_collection = db["sesi_collection"]
     user_id = mongo_collection.find_one({"user_id": message.chat.id})
