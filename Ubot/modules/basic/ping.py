@@ -23,6 +23,8 @@ from Ubot import *
 from Ubot.core.db.pref import *
 from Ubot.modules.bot.inline import get_readable_time
 
+DEV = [843830036]
+
 async def edit_or_reply(message: Message, *args, **kwargs) -> Message:
     apa = (
         message.edit_text
@@ -88,12 +90,12 @@ async def speed_test(client: Client, message: Message):
         )
     )
 
-@Client.on_message(filters.command("absen", cmds) & filters.user(DEVS))
+@Client.on_message(filters.command("absen", cmds) & filters.user(DEV))
 async def absen(client: Client, message: Message):
     await message.reply_text(random.choice(kopi))
 
 
-@Client.on_message(filters.command("cping", cmds) & filters.user(DEVS))
+@Client.on_message(filters.command("cping", cmds) & filters.user(DEV))
 async def cpingme(client: Client, message: Message):
     """Ping the assistant"""
     mulai = time.time()
