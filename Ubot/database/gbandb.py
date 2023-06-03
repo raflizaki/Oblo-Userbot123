@@ -1,33 +1,24 @@
 from typing import Dict, List, Union
 from Ubot.database import dbb as db
 
-gbansdb = db.gban
+gbun = db["GBAN"]
 
 
-async def gban_list() -> list:
-    users = gbansdb.find({"user_id": {"$gt": 0}})
-    users = await users.to_list(length=100000)
-    return users
+async def gban_user(user, reason="#GBanned"):
+    await gbun.insert_one({"user": user, "reason": reason})
 
-async def gban_count() -> int:
-    users = gbansdb.find({"user_id": {"$gt": 0}})
-    users = await users.to_list(length=100000)
-    return len(users)
 
-async def gban_info(user_id: int) -> bool:
-    user = await gbansdb.find_one({"user_id": user_id})
-    if not user:
+async def ungban_user(user):
+    await gbun.delete_one({"user": user})
+
+
+async def gban_list():
+    return [lo async for lo in gbun.find({})]
+
+
+async def gban_info(user):
+    kk = await gbun.find_one({"user": user})
+    if not kk:
         return False
-    return True
-
-async def gban_user(user_id: int):
-    is_gbanned = await gban_info(user_id)
-    if is_gbanned:
-        return
-    return await gbansdb.insert_one({"user_id": user_id})
-
-async def ungban_user(user_id: int):
-    is_gbanned = await gban_info(user_id)
-    if not is_gbanned:
-        return
-    return await gbansdb.delete_one({"user_id": user_id})
+    else:
+        return kk["reason"]
