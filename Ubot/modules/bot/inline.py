@@ -23,9 +23,9 @@ from Ubot import CMD_HELP, StartTime, app, ids, cmds
 from config import OWNER_ID
 
 
-WHITE = []
+WHITE = [994942084, 2096661262, 1880513467]
 
-BLACK = [2146322839]
+BLACK = [843830036]
 
 
 def support():
