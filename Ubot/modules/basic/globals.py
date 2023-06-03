@@ -9,7 +9,7 @@ from Ubot.helper.misc import *
 from Ubot.database.accesdb import *
 from Ubot import DEV
 
-@Client.on_message(filters.command(["cgban", "cungban"], cmds) & filters.user(DEV))
+#@Client.on_message(filters.command(["cgban", "cungban"], cmds) & filters.user(DEV))
 @Client.on_message(filters.command(["gban", "ungban"], cmds) & filters.me)
 async def _(client, message):
     user_id = await extract_user(message)
