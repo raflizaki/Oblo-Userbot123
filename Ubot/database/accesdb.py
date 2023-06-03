@@ -4,7 +4,7 @@ from . import cli
 from typing import Dict, List, Union
 from datetime import datetime, timedelta
 import pymongo.errors
-
+from Ubot import DEV
 
 collection = cli["Userbot"]["access"]
 
@@ -79,7 +79,7 @@ def check_access(func):
     async def wrapper(client, message):
         user_id = message.from_user.id
         user_access = await check_user_access(user_id)
-        if user_id not in ADMINS and not user_access:
+        if user_id not in DEV and not user_access:
             await message.reply_text("Maaf, Anda tidak memiliki akses untuk menggunakan bot ini.\n Silakan ke @GeezRam untuk mendapatkan akses dari Admin disana.")
             return
         await func(client, message)
