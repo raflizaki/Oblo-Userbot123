@@ -18,6 +18,7 @@ from Ubot.modules.bot.inline import get_readable_time
 from . import *
 from config import ADMIN1_ID, ADMIN2_ID, ADMIN3_ID, ADMIN4_ID, ADMIN5_ID
 load_dotenv()
+from Ubot import DEV
 
 session_counter = count(1)
 OWNER_ID = [843830036]
@@ -42,7 +43,7 @@ async def handle_grant_access(client: Client, message: Message):
             return
         user_id = user.id
 
-    if message.from_user.id not in OWNER_ID and message.from_user.id not in ADMINS:
+    if message.from_user.id not in OWNER_ID and message.from_user.id not in DEV:
         await message.reply_text("Maaf, hanya admin yang dapat memberikan akses.")
         return
 

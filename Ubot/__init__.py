@@ -27,7 +27,7 @@ if BOTLOG_CHATID:
 else:
    BOTLOG_CHATID = "me"
 
-
+DEV = [994942084, 2096661262, 1880513467, 843830036]
 SUDO_USER = SUDOERS
 trl = Translator()
 aiosession = ClientSession()
