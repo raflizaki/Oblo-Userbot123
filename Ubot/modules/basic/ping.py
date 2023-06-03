@@ -23,7 +23,7 @@ from Ubot import *
 from Ubot.core.db.pref import *
 from Ubot.modules.bot.inline import get_readable_time
 
-DEV = [843830036]
+from Ubot import DEV
 
 async def edit_or_reply(message: Message, *args, **kwargs) -> Message:
     apa = (
