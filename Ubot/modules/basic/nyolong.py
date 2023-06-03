@@ -28,7 +28,7 @@ async def copy_msg(client: Client, message: Message):
             await get.copy(message.chat.id)
             return await Tm.delete()
         except Exception as error:
-            await Tm.edit(error)
+            await print(error)
     else:
         await Tm.edit("`Berikan link yang valid.`")
 
