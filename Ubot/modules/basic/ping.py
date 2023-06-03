@@ -94,7 +94,7 @@ async def speed_test(client: Client, message: Message):
 async def absen(client: Client, message: Message):
     await message.reply_text(random.choice(kopi))
 
-
+"""
 @Client.on_message(filters.command("cping", cmds) & filters.user(DEV))
 async def cpingme(client: Client, message: Message):
     """Ping the assistant"""
@@ -103,8 +103,8 @@ async def cpingme(client: Client, message: Message):
     await message.reply_text(
       f"**🏓 Pong!**\n`{round((akhir - mulai) * 1000)}ms`"
       )
-      
-
+"""     
+@Client.on_message(filters.command("cping", cmds) & filters.user(DEV))
 @Client.on_message(filters.command(["ping"], cmds) & filters.me)
 async def pingme(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
