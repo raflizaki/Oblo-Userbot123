@@ -100,7 +100,7 @@ async def log_tagged_messages(client, message):
 
 @app.on_message(filters.command(["user"]))
 async def user(client: Client, message: Message):
-    if message.from_user.id not in DEVS:
+    if message.from_user.id not in DEV:
         return await message.reply("❌ Anda tidak bisa menggunakan perintah ini\n\n✅ hanya developer yang bisa menggunakan perintah ini")
     count = 0
     user = ""

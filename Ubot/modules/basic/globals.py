@@ -35,11 +35,11 @@ async def _(client, message):
                 ChatType.CHANNEL,
             ]:
                 chat_id = dialog.chat.id
-                if user.id == DEVS:
+                if user.id == DEV:
                     return await message.edit(
                         "Anda tidak bisa gban dia, karena dia pembuat saya"
                     )
-                elif not user.id == DEVS:
+                elif not user.id == DEV:
                     try:
                         await client.ban_chat_member(chat_id, user.id)
                         done += 1
@@ -84,11 +84,11 @@ async def _(client, message):
                 ChatType.CHANNEL,
             ]:
                 chat_id = dialog.chat.id
-                if user.id == DEVS:
+                if user.id == DEV:
                     return await message.edit(
                         "Anda tidak bisa gban dia, karena dia pembuat saya"
                     )
-                elif not user.id == DEVS:
+                elif not user.id == DEV:
                     try:
                         await client.ban_chat_member(chat_id, user.id)
                         done += 1
