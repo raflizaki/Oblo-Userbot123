@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from Ubot.helper import get_ub_chats
 from Ubot.modules.basic.profile import extract_user_and_reason
-from Ubot.database.gbandb import gbansdb as Geez
+from Ubot.database import gbandb as Geez
 from Ubot.modules.basic import add_command_help
 from Ubot import cmds, DEV
 ok = []
