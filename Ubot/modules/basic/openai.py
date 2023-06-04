@@ -19,7 +19,7 @@ from config import OPENAI_API_KEY
 
 RMBG_API_KEY = "3RCCWg8tMBfDWdAs44YMfJmC"
 
-API = "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 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".split()
+API = "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".split()
         
 
 @Ubot(["ai", "ask"], cmds)
